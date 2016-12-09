@@ -37,7 +37,7 @@ public class TelaJogador extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jButton1.setText("Enviar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -48,20 +48,20 @@ public class TelaJogador extends javax.swing.JFrame {
 
         jLabel2.setText("Digite uma letra:");
 
-        jTextField1.setText("jTextField1");
+        jTextField1.setEditable(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
-        jTextField2.setText("jTextField2");
+        jTextField2.setText("Digite uma letra");
 
         jLabel3.setText("Letras digitadas:");
 
         jLabel4.setText("Dica:");
 
-        jTextField3.setText("jTextField3");
+        jTextField3.setEditable(false);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
