@@ -11,7 +11,7 @@ class UDPClient {
 
 		DatagramSocket clientSocket = new DatagramSocket();
 
-		String servidor = "10.1.22";
+		String servidor = "255.255.255.255";
 		int porta = 9876;
 
 		InetAddress IPAddress = InetAddress.getByName(servidor);

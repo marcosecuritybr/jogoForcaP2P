@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 package Front;
-import forca.Client;
-import forca.Server;
+import forca.ClientController;
+import forca.ServerController;
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -98,32 +99,35 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Botão novo jogo
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            //Botão novo jogo
-            Server s1 = new Server();
+
+        ServerController s1;
         try {
-            s1.novoJogo();
+            s1 = new ServerController();
         } catch (IOException ex) {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         }
-            new TelaCoordenador().setVisible(true);
+       
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        System.out.println("Saindo...");
        System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
-
+    //Botão procurar jogo
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        //Botão procurar jogo
-        Client c1 = new Client();
         try {
-            c1.conexao();
+            
+            ClientController c1 = new ClientController();
         } catch (IOException ex) {
             Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Menu.class.getName()).log(Level.SEVERE, null, ex);
         }
-        new TelaJogador().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
